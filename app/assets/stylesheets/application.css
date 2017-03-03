@@ -1,0 +1,74 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require foundation_and_overrides
+
+ */
+
+body{
+  background: url('bg.png');
+}
+
+.top-bar, .top-bar a{
+  color: #fff;
+}
+
+.top-bar{
+  margin-bottom: 10px;
+}
+
+#notice{
+  text-align: center;
+  background-color: green;
+  color: white;
+}
+
+#hidethis{
+  display: none;
+}
+
+#post{
+  border: solid 3px #222;
+  margin-bottom: 10px;
+}
+
+#post-top, #post-bottom{
+  padding: 5px;
+}
+
+#post-top{
+  background-color: rgba(255,200,0,0.4);
+}
+
+#post-top a{
+  color: #000;
+}
+
+#post-top h2{
+  display: inline;
+}
+
+.fi-pencil, .fi-x{
+  float: right;
+  padding: 5px;
+}
+
+#post-bottom{
+  background-color: #222;
+  color: white;
+}
+
+#post-bottom i{
+  float: right;
+}

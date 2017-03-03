@@ -1,0 +1,29 @@
+<div class="row" id="notice">
+  <strong><%= notice %></strong>
+</div>
+
+<div class="medium-8 small-centered columns">
+<h1>Guestbook</h1>
+
+<%= link_to 'New Post', new_post_path %>
+
+    <% @posts.each do |post| %>
+    <% @user = User.find_by_id(post.user_id) %>
+    <div id="post">
+      <div id="post-top">
+        <% if current_user %>
+        <% if @user.id == current_user.id %>
+        <i><%= link_to '', post, method: :delete, data: { confirm: 'Are you sure?' }, class: "fi-x" %></i>
+        <i><%= link_to '', edit_post_path(post), class: "fi-pencil" %></i>
+        <% end %>
+        <% end %>
+        <h2><%= post.title %></h2>
+        <p><%= post.content %></p>
+      </div>
+      <div id="post-bottom">
+        <strong><%= @user.username %></strong>
+        <i><%= post.created_at %></i>
+      </div>
+    </div>
+      <% end %>
+</div>
